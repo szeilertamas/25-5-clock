@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #24292f;
+  color: ghostwhite;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 32px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #24292f;
+  padding: 10px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 400px;
+  /* background-color: gray; */
+  padding: 40px;
+  border-radius: 4px 4px 0px 0px;
+}
+
+#break-label {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  background-color: teal;
+  padding: 20px;
+  /* border-right: 1px solid black; */
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 4px 0 0 4px;
+}
+
+#session-label {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  background-color: teal;
+  padding: 20px;
+  /* border-left: 1px solid black; */
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 0 8px 8px 0;
+}
+
+#timer-label {
+  width: 80%;
+  max-width: 400px;
+  height: 300px;
+  /* background-color: gray; */
+  padding: 40px;
+  border-radius: 0 0 8px 8px;
+}
+
+.break-container {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  align-items: center;
+  gap: 5px;
+  height: 50%;
+  padding: 5px;
+}
+
+.session-container {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  align-items: center;
+  gap: 5px;
+  height: 50%;
+  padding: 5px;
+}
+
+.break-container button,
+.session-container button {
+    border: none;
+    background-color: teal;
+    color: ghostwhite;
+    font-size: 48px;
+}
+
+button:hover, button:active {
+    cursor: pointer;
+}
+
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    font-size: 42px;
+    gap: 20px;
+    height: 80%;
+    background-color: teal;
+    padding-top: 20px;
+    border-radius: 8px;
+    border: 2px solid black;
+    padding-bottom: 20px;
+}
+
+.timer-container button {
+    border: none;
+    background-color: teal;
+    color: ghostwhite;
+    font-size: 36px;
+    /* border: 4px solid; */
+    border-radius: 100px;
+    padding: 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
