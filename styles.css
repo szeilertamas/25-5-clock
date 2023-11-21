@@ -128,3 +128,13 @@ button:hover, button:active {
     flex-direction: row;
     gap: 20px;
 }
+
+#timer {
+  font-size: 42px;
+  margin: 0;
+  padding: 0;
+}
+
+#beep-sound {
+  height: 50px;
+}
