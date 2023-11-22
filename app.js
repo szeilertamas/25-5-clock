@@ -92,9 +92,6 @@ function startStopTimer() {
     const count = breakStarted ? breakLengthCount : sessionLengthCount;
 
     if (breakStarted) {
-      // If it's a break, start the countdown immediately
-      isTimerRunning = true;
-      intervalId = setInterval(startStopTimer, 1000);
       updateTimer(count, 0);
     } else {
       // Set the correct starting value for the break countdown
