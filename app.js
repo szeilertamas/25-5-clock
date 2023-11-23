@@ -28,8 +28,8 @@ function updateElementValue(elementId, newValue) {
 }
 
 function updateTimer(minutes, seconds) {
-  const formattedMinutes = String(minutes).padStart(2, '0');
-  const formattedSeconds = String(seconds).padStart(2, '0');
+  const formattedMinutes = String(minutes).padStart(2, "0");
+  const formattedSeconds = String(seconds).padStart(2, "0");
   defaultTimeElement.innerText = `${formattedMinutes}:${formattedSeconds}`;
 }
 
@@ -42,26 +42,42 @@ function updateLengthAndCount(elementId, count, increment) {
 
 function breakIncrement() {
   if (!isTimerRunning) {
-    breakLengthCount = updateLengthAndCount("break-length", breakLengthCount, 1);
+    breakLengthCount = updateLengthAndCount(
+      "break-length",
+      breakLengthCount,
+      1
+    );
   }
 }
 
 function breakDecrement() {
   if (!isTimerRunning) {
-    breakLengthCount = updateLengthAndCount("break-length", breakLengthCount, -1);
+    breakLengthCount = updateLengthAndCount(
+      "break-length",
+      breakLengthCount,
+      -1
+    );
   }
 }
 
 function sessionIncrement() {
   if (!isTimerRunning) {
-    sessionLengthCount = updateLengthAndCount("session-length", sessionLengthCount, 1);
+    sessionLengthCount = updateLengthAndCount(
+      "session-length",
+      sessionLengthCount,
+      1
+    );
     updateTimer(sessionLengthCount, 0);
   }
 }
 
 function sessionDecrement() {
   if (!isTimerRunning) {
-    sessionLengthCount = updateLengthAndCount("session-length", sessionLengthCount, -1);
+    sessionLengthCount = updateLengthAndCount(
+      "session-length",
+      sessionLengthCount,
+      -1
+    );
     updateTimer(sessionLengthCount, 0);
   }
 }
@@ -76,12 +92,15 @@ function startStopInterval() {
 }
 
 function playAudio() {
-  document.getElementById("beep").play();
+  const audioElement = document.getElementById("beep");
+  audioElement.currentTime = 0;
+  audioElement.play();
 }
 
 function startStopTimer() {
   let time = defaultTimeElement.innerText;
-  let secondsTotal = parseInt(time.split(":")[0]) * 60 + parseInt(time.split(":")[1]);
+  let secondsTotal =
+    parseInt(time.split(":")[0]) * 60 + parseInt(time.split(":")[1]);
 
   if (secondsTotal === 0) {
     playAudio();
