@@ -41,6 +41,8 @@ The 25 + 5 Clock is a productivity tool that follows the Pomodoro technique. It 
 
 External Libraries:
 - [Font Awesome](https://fontawesome.com/) for icons
+- [Bootstrap](https://getbootstrap.com/) for responsive design
+
 
 ## How to Contribute
 
